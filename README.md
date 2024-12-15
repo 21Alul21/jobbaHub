@@ -21,5 +21,3 @@ fit the role.
 - Database (Sqlite)
 
 N/B The project is currently under development
-
-
