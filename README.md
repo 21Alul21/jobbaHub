@@ -20,7 +20,6 @@ fit the role.
 - Python (Django Rest Framework)
 - Database (Sqlite)
 
-
 N/B The project is currently under development
 
 
