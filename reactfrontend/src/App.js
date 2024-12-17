@@ -1,4 +1,3 @@
-import "./App.css";
 import Login from "./pages/login";
 import Register from "./pages/register";
 import JobPosts from "./pages/job_posts";
@@ -16,15 +15,18 @@ import RefreshAccess from "./utils/tokenRefresh";
 function App() {
   return (
     <Router>
-       <RefreshAccess />
-      
+      <RefreshAccess />
+
       <Routes>
         {/* protected routes */}
 
         <Route element={<Protected />}>
           <Route path="/jobs-applied/" element={<JobsApplied />} />
           <Route path="/jobs-posted/" element={<JobsPosted />} />
-          <Route path="/job-application/:job_id/" element={<JobApplication />} />
+          <Route
+            path="/job-application/:job_id/"
+            element={<JobApplication />}
+          />
           <Route path="/post-job/" element={<PostJob />} />
           <Route path="/profile/" element={<Profile />} />
         </Route>

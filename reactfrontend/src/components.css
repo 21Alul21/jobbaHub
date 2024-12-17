@@ -1,56 +1,178 @@
-header{
-width: 100%;
-height: 50px;
-background-color: green;
-color: white;
-font-weight: bolder;
+header {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: green;
+  color: var(--white);
+  font-weight: bolder;
+  border-radius: 5px;
+  padding: 10px 15px;
 }
-nav{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 10px;
-    
-    justify-content: space-between;
- 
-}
-
-nav ul {
+header nav {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style-type: none;
   width: 100%;
- 
 }
-
-header nav ul li {
+@media (min-width: 800px) {
+  header nav ul.not-menu {
+    width: fit-content !important;
+    gap: 30px;
+  }
+  header nav ul.not-menu div {
+    display: flex;
+  }
+  header nav ul.not-menu li a {
+    font-weight: normal;
+    color: #ddd;
+    font-size: 14px;
     text-decoration: none;
+  }
+  header nav ul.not-menu li a:hover {
+    color: var(--white);
+    font-weight: 600;
+  }
+}
+@media (max-width: 800px) {
+  header nav ul.not-menu {
+    display: none;
+  }
+}
+header nav .logo a.Link {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--white);
 }
 
-.Link{
-   
-    color: white;
-   
-   
+header nav .hamburger-menu {
+  position: relative;
+  width: 23px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background-color: transparent;
+  border: none;
+  transform-origin: center;
+  border-radius: 5px;
+
+  transition: all 0.4s;
+}
+@media (min-width: 800px) {
+  header nav .hamburger-menu {
+    display: none;
+  }
+}
+header nav .hamburger-menu:has(span.clicked) {
+  transform: rotate(360deg);
 }
 
-.apply-button{
-    width: 200px;
-    padding: 15px;
-    border: none;
-    background-color: green;
-    color: white;
-    font-weight: bolder;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    
+header nav .hamburger-menu:hover {
+  cursor: pointer;
+  /* background-color: var(--white); */
+}
+header nav .hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 9.55%;
+  border-radius: 2px;
+  background-color: var(--white);
+  transform-origin: center;
+  transition: all 0.4s;
+}
+header nav .hamburger-menu span.clicked:nth-of-type(1) {
+  /* background-color: var(--main); */
+  display: none;
+}
+header nav .hamburger-menu span.clicked:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(45deg);
+}
+header nav .hamburger-menu span.clicked:nth-of-type(3) {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%) rotate(-45deg);
 }
 
-.apply-button:hover{
-    background-color:cadetblue;
+header .menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: 40%;
+  max-width: 187.46px;
+  height: fit-content;
+  padding: 8px 10px;
+  z-index: 1;
+  border-radius: 5px;
+  background-color: #008000cf;
+  backdrop-filter: blur(10px);
+}
+@media (min-width: 800px) {
+  header .menu {
+    display: none;
+  }
 }
 
-.Link{
-    text-decoration: none;
+header .menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+}
+header .menu ul li {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .menu ul li a {
+  font-weight: normal;
+  color: #ddd;
+  text-decoration: none;
+}
+header .menu ul li a:hover {
+  color: var(--white);
+  font-weight: 600;
+}
+
+header .menu ul hr {
+  width: 100%;
+  border-color: #00800044;
+}
+
+.apply-button {
+  width: 200px;
+  padding: 15px;
+  border: none;
+  background-color: green;
+  color: var(--white);
+  font-weight: bolder;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.apply-button:hover {
+  background-color: cadetblue;
+}
+
+.Link {
+  text-decoration: none;
 }

@@ -1,104 +1,218 @@
-.login-container{
-    width: 80%;
-    height: 60%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Signup and login styles */
+/* ///////////////////////////////////////////////////////////////////////// */
+section.section-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+section.section-auth h1 {
+  font-size: 30px;
+  color: var(--main);
+}
+section.section-auth form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+section.section-auth form input {
+  padding: 11px;
+  border: none;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0 0 4px 1px #00800020;
+  border: 1.5px solid transparent;
+  transition: all 0.4s;
 }
 
-form{
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+section.section-auth form input:focus {
+  border-color: #008000cc;
+  outline: none;
 }
 
-input{
-    width: 80%;
-    height: 60px;
-    margin-bottom: 10px;
-    padding-left: 10px;
+.login-button,
+.register-button {
+  padding: 12px 30px;
+  width: fit-content;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main);
+  color: var(--white);
+  font-weight: 600;
 }
 
-.login-button, .register-button{
-    width: 200px;
-    padding: 20px;
-    border: none;
-    background-color: green;
-    color: white;
-    font-weight: bolder;
-    margin-bottom: 20px;
+.login-button:hover,
+.register-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 1px #008000aa;
+  background-color: #014f01cd;
 }
 
-.login-button:hover{
-    background-color:cadetblue;
+section.section-auth div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #555;
+}
+section.section-auth div a {
+  color: var(--main);
+  text-decoration: none;
+}
+section.section-auth div a:hover,
+a:active {
+  text-decoration: underline;
+}
+section.section-auth div * {
+  font-size: 14px;
+  font-weight: normal;
 }
 
-.register-button:hover{
-    background-color:cadetblue;
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Job_posts styles */
+/* ///////////////////////////////////////////////////////////////////////// */
+/* search area */
+section.section-job-posts {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 30px;
+}
+section.section-job-posts .search-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+}
+section.section-job-posts .search-container input {
+  padding: 11px;
+  border: none;
+  width: 400px;
+  border-radius: 5px;
+  border: 1.5px solid #eee;
+  transition: all 0.4s;
+}
+section.section-job-posts .search-container input:focus {
+  box-shadow: 0 0 4px 1px #00800020;
+  border-color: #008000cc;
+  outline: none;
+}
+section.section-job-posts .search-container button {
+  padding: 11px 30px;
+  width: fit-content;
+  border-radius: 5px;
+  background-color: var(--main);
+  border: none;
+  color: var(--white);
+  font-weight: 600;
+}
+section.section-job-posts .search-container button:hover {
+  box-shadow: 0 0 4px 1px #008000aa;
+  cursor: pointer;
+  background-color: #014f01cd;
 }
 
-.register-container, .job-application-container{
-    width: 80%;
-    height: 60%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+/* Available jobs for you */
+section.section-job-posts main {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+section.section-job-posts main h1 {
+  font-size: 18px;
+  color: var(--main);
+}
+section.section-job-posts main ul {
+  /* border: 1px solid red; */
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+section.section-job-posts main ul li {
+  width: 380px;
+  border: 1px solid #00800020;
+  padding: 20px 10px;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  color: #555;
+  transition: all 0.4s;
+}
+section.section-job-posts main ul li:hover {
+  background-color: var(--main);
+  color: var(--white);
+}
+section.section-job-posts main ul li:last-of-type {
+  border: none;
 }
 
-
-.profile-pic-container{
-    width: 150px;
-    height: 150px;
-    border-radius: 100%;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    background-color: bisque;
-
+section.section-job-posts main ul li h3 {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+section.section-job-posts main {
+  /* border: 1px solid red; */
 }
 
-.profile-container{
-    width: 80%;
-    
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+/* ///////////////////////////////////////////////////////////////////////// */
+/*  styles */
+/* ///////////////////////////////////////////////////////////////////////// */
 
+.job-application-container {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-#select-cv{
-    display: none;
+.profile-pic-container {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  background-color: bisque;
 }
 
-.select-cv{
-    display: block;
-    background-color: rgb(7, 73, 68);
-    width: 200px;
-    height: 50px;
-    color: white;
-    display: flex;
-    justify-content: center;
-    
+.profile-container {
+  width: 80%;
+
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
-.profile-pic-container img{
-    width: 150px;
-    height: 150px;
+#select-cv {
+  display: none;
+}
+
+.select-cv {
+  display: block;
+  background-color: rgb(7, 73, 68);
+  width: 200px;
+  height: 50px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic-container img {
+  width: 150px;
+  height: 150px;
 }
