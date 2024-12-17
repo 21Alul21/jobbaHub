@@ -1,0 +1,104 @@
+.login-container{
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form{
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 80%;
+    height: 60px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+.login-button, .register-button{
+    width: 200px;
+    padding: 20px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.login-button:hover{
+    background-color:cadetblue;
+}
+
+.register-button:hover{
+    background-color:cadetblue;
+}
+
+.register-container, .job-application-container{
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.profile-pic-container{
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    background-color: bisque;
+
+}
+
+.profile-container{
+    width: 80%;
+    
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+
+#select-cv{
+    display: none;
+}
+
+.select-cv{
+    display: block;
+    background-color: rgb(7, 73, 68);
+    width: 200px;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.profile-pic-container img{
+    width: 150px;
+    height: 150px;
+}
