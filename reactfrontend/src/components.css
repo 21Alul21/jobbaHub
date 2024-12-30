@@ -158,21 +158,6 @@ header .menu ul hr {
   border-color: #00800044;
 }
 
-.apply-button {
-  width: 200px;
-  padding: 15px;
-  border: none;
-  background-color: green;
-  color: var(--white);
-  font-weight: bolder;
-  margin-bottom: 20px;
-  margin-left: 20px;
-}
-
-.apply-button:hover {
-  background-color: cadetblue;
-}
-
 .Link {
   text-decoration: none;
 }

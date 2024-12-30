@@ -7,6 +7,7 @@
 :root {
   --white: #f7f7f7;
   --main: green;
+  --red: rgb(217, 40, 40);
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,10 +18,11 @@ body {
   background-color: #fbfbfb;
   color: #222;
   padding: 10px;
+  overflow-x: hidden;
 }
 
 body #root {
-  height: calc(100svh - 20px);
+  min-height: calc(100svh - 71.3333px);
   display: flex;
   flex-direction: column;
 }

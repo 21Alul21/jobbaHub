@@ -158,7 +158,78 @@ section.section-job-posts main ul li h3 {
   text-transform: capitalize;
 }
 section.section-job-posts main {
-  /* border: 1px solid red; */
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Job_posts_details styles */
+/* ///////////////////////////////////////////////////////////////////////// */
+.section-job-post_details {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.section-job-post_details h4 {
+  color: var(--main);
+}
+.section-job-post_details main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 20px;
+}
+.section-job-post_details main div.jobs-post {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.section-job-post_details main div.jobs-post h2 {
+  font-size: 22px;
+  text-align: center;
+}
+.section-job-post_details main div.jobs-post strong {
+  color: #333;
+}
+.section-job-post_details main div.jobs-post h3 {
+  color: var(--main);
+}
+.section-job-post_details main div.btn-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.section-job-post_details main button:not(.delete) {
+  padding: 12px 30px;
+  width: fit-content;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main);
+  color: var(--white);
+  font-weight: 600;
+}
+.section-job-post_details main button:not(.delete):hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 1px #008000aa;
+  background-color: #014f01cd;
+}
+.section-job-post_details main button:is(.delete) {
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  padding: 12px 30px;
+}
+.section-job-post_details main button:is(.delete):hover {
+  cursor: pointer;
+  box-shadow: 0 0 4px 1px #008000aa;
+  background-color: transparent;
+  color: var(--red);
+  border-color: var(--red);
 }
 
 /* ///////////////////////////////////////////////////////////////////////// */
