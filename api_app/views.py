@@ -91,9 +91,11 @@ class UpdateProfileView(APIView):
     def patch(self, request, *args, **kwargs):
 
         user = request.user
-        serializer = UserSerializer(user, data=request.data)
+        serializer = UserSerializer(user, data=request.data, partial=True)
         if serializer.is_valid():
+            serializer.save()
             return Response({'success': 'user profile info successfully updated'}, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
         
 class ChangePasswordView(APIView):
